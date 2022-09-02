@@ -1,0 +1,17 @@
+
+
+table {
+	border-collapse: collapse;
+}
+
+
+h1 {
+    padding;
+    text-align;
+    border;
+
+}
+
+table tr:nth-child(odd) td, th {
+    background-color: grey ;
+}
