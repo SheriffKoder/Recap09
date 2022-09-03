@@ -69,7 +69,7 @@
     grid-template-areas: 
     "Gtop Gtop Gtop Gtop"
     "Gleft Gright Gright Gright"
-    "Glow Glow Glow Glow" 
+    "Glow Glow Glow no-name" 
 
 
 }
@@ -96,9 +96,59 @@
 }
 
 #Glow_grid {
-    grid-area: Glow;
+    grid-area: 3 / 4 / 3 / 4;
 
 }
 
 
-	
+/*
+    grid-auto-rows:	minmax(100px, 150px);
+according to what ?
+
+	/*grid-template-columns: auto auto;*/
+    /*can be used to get boxes horizontal each other rather 
+    than vertical to each other, and not use areas
+??
+*/
+
+.bordered {
+
+    border: 1px solid black;
+
+}
+
+.ol_box {
+
+    height: 300px;
+    width: 90%;
+    border: 1px solid red;
+
+    padding: 0px;
+
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+}
+
+.ol_box_item {
+
+    list-style-type: none;
+    height: 50px;
+    flex-basis: 100px;
+
+}
+
+.grow1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.grow2 {
+    flex-grow: 3;
+    flex-shrink: 6;
+}
+
