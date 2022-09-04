@@ -150,11 +150,109 @@ according to what ?
 .grow2 {
     flex-grow: 3;
     flex-shrink: 6;
+    
 }
 
 
-#100 {
+#aaa {
+    margin: 0 auto;
 
-    float: right;
+}
 
+
+input:required:invalid {
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+			background-position: right top;
+            background-repeat: no-repeat;    
+
+
+
+}
+
+
+.divX {
+    border: 6px solid red;
+    background-color: black;
+    height: 100px;
+    width: 100px;
+
+    transition: transform .5s ease-in-out;
+    padding-left: 10px;
+
+}
+
+.divX:hover {
+    border: 6px solid lime;
+    background-color: black;
+
+    transform: rotate(-2deg) translateY(-5px) scale(1.035);
+    box-shadow: 0 0 1.5rem rgb(17,17,17);
+
+}
+
+.relative_test {
+    border: 1px solid red;
+
+    height: 310px;
+    width: 450px;
+
+}
+
+.relative_test2 {
+    border: 1px solid lime;
+    background-color: black;
+
+    height: 100px;
+    width: 100px;
+
+    position: relative;
+
+    margin-left: 25%;
+}
+
+/* ability to add style on screen size (responsive) */
+/*give style when screen 500px or more*/
+@media screen and (min-width: 500px) {
+    .relative_test2 {
+        background-color: grey;
+    }
+}
+
+
+
+
+.container_image {
+    width: 90%;
+    height: 100px;
+
+    position: fixed; 
+    top: 0;
+
+    background-image: url("ship.webp");
+    border: 2px solid #4CAF50;
+
+
+    /* be a header on scroll */
+    /* position: sticky;  stays in its place and be a header on scroll */
+
+
+}
+
+
+/* changing the text selection color */
+.container_image::selection {
+    color: white;
+    background: blueviolet;
+}
+
+
+/*if you want to make an inline element have HW properties
+give it display: block or inline-block*/
+
+/*max-width, margin %*/
+
+
+input:out-of-range { /*if you type input out of min/max range it is given a style */
+    border: 3px solid blue;
+    border-radius: 2px;
 }
