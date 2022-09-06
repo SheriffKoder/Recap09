@@ -170,7 +170,7 @@ input:required:invalid {
 }
 
 
-.divX {
+#divX {
     border: 6px solid red;
     background-color: black;
     height: 100px;
@@ -181,7 +181,7 @@ input:required:invalid {
 
 }
 
-.divX:hover {
+#divX:hover {
     border: 6px solid lime;
     background-color: black;
 
@@ -249,10 +249,9 @@ input:required:invalid {
 /*if you want to make an inline element have HW properties
 give it display: block or inline-block*/
 
-/*max-width, margin %*/
 
 
-input:out-of-range { /*if you type input out of min/max range it is given a style */
+input:out-of-range { /*if you type input out of min/max number range it is given a style */
     border: 3px solid blue;
     border-radius: 2px;
 }
