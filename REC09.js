@@ -115,7 +115,7 @@ let errors_array = [];
 console.log(errors_array);
 let output;
 
-for (i=0; i<3; i++) {
+/*for (i=0; i<3; i++) {
 
     errors_array[i] = prompt ("enter error", "here");
 
@@ -124,4 +124,52 @@ for (i=0; i<3; i++) {
 
 console.log(errors_array);
 console.log(output);
+*/
 
+////////////////////////////////////
+
+
+//playing with objects 
+
+let object_choices = {
+    'rock' : {'sci':1, 'rock':0.5, 'paper': 0},
+};
+
+console.log (object_choices.rock.paper);
+console.log (object_choices['rock']['paper']);
+
+
+function output_select (x) {
+
+    let score_output = {
+        '1': {message: 'you tied', color:'blue'},
+    };
+
+    return score_output[x];
+}
+
+
+let eight_04 = output_select(1);
+
+console.log(eight_04['color']);
+
+
+//image creation, set src/class, append to div
+
+let imagex = document.createElement('img');
+imagex.src = './mochi.jpg';
+imagex.setAttribute('class', 'boxed_image');
+document.getElementById('divX2').appendChild(imagex);
+
+
+//
+
+let newDiv = document.createElement('div');
+
+newDiv.innerHTML = 
+"<h1 style='color:" +eight_04['color']+ "'> "
+    + eight_04['message'] +
+"</h1>";
+
+
+document.getElementById('divX2').appendChild(newDiv);

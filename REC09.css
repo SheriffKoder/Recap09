@@ -255,3 +255,24 @@ input:out-of-range { /*if you type input out of min/max number range it is given
     border: 3px solid blue;
     border-radius: 2px;
 }
+
+
+
+.boxed_image {
+    border: 3px solid blue;
+    height: 100px;
+    width: 100px;
+
+}
+
+#divX2 {
+    height: 200px;
+    width: 200px;
+    border: 3px solid blue;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
