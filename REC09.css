@@ -276,3 +276,10 @@ input:out-of-range { /*if you type input out of min/max number range it is given
     justify-content: center;
 
 }
+
+.redbutton {
+    background-color: red;
+}
+.bluebutton {
+    background-color: blue;
+}

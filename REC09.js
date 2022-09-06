@@ -142,7 +142,7 @@ console.log (object_choices['rock']['paper']);
 function output_select (x) {
 
     let score_output = {
-        '1': {message: 'you tied', color:'blue'},
+        '1': {message: 'you tied', color:'blue', color2:'red'},
     };
 
     return score_output[x];
@@ -159,10 +159,12 @@ console.log(eight_04['color']);
 let imagex = document.createElement('img');
 imagex.src = './mochi.jpg';
 imagex.setAttribute('class', 'boxed_image');
-document.getElementById('divX2').appendChild(imagex);
+
+let Image_div = document.querySelector('#divX2');
+Image_div.appendChild(imagex);
 
 
-//
+//create a new div and by innerHTML add H1 with message/color of prev object
 
 let newDiv = document.createElement('div');
 
@@ -173,3 +175,79 @@ newDiv.innerHTML =
 
 
 document.getElementById('divX2').appendChild(newDiv);
+
+
+//create and append textnode to para to div, add color from object value
+
+let textAnswer2 = document.createTextNode(eight_04['message']);
+let textspace = document.createElement('p');
+
+textspace.style.color = eight_04['color2'];
+
+textspace.appendChild(textAnswer2);
+document.getElementById('divX2').appendChild(textspace);
+
+
+
+//take input from HTML selection onselect
+
+function selection_function2 (input_selection) {
+
+    let input_value = input_selection.value;
+    console.log(input_value);
+}
+
+
+
+//gather buttons
+let buttons = document.getElementsByTagName('button');
+console.log(buttons);
+
+//show its class
+let old_class = buttons[1].classList[0];
+console.log(old_class);
+
+
+//save class in array
+let current_classes = [];
+current_classes.push(old_class);
+console.log(current_classes);
+
+
+//remove class from button classlist
+buttons[1].classList.remove(old_class);
+let nine_40 = buttons[1].classList[0];
+console.log(nine_40);
+
+//add new class to button classlist
+let new_class = "bluebutton";
+buttons[1].classList.add(new_class);
+
+//
+
+function queryFunction () {
+
+    
+    let yourImages2 = document.querySelectorAll('img');
+    console.log(yourImages2[1]);
+
+    for (i=0; i<yourImages2.length; i++) {
+        yourImages2[i].src = './mochi2.jpg';
+    }
+    
+}
+
+queryFunction();
+
+
+//Timer
+
+function sleepfunc (TimeInMs) {
+    return new Promise (resolve => setTimeout(resolve, TimeInMs ));
+}
+
+
+console.log("hey");
+sleepfunc(2000);
+console.log("hey");
+console.log("hey");
