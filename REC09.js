@@ -251,3 +251,43 @@ console.log("hey");
 sleepfunc(2000);
 console.log("hey");
 console.log("hey");
+
+
+
+//get two random numbers from 0->3
+
+let Ten_01 = ( Math.random() * 3 ) + 1;
+let Ten_02 = ( Math.random() * 3 ) + 1;
+
+let testNu1 = Math.floor(Ten_01);
+let testNu2 = Math.floor(Ten_02);
+
+console.log(testNu1);
+console.log(testNu2);
+
+//store button class name then remove and add new class name
+
+
+let class_backup_object = {
+
+    'ButtonClass': document.getElementById('100').classList[0],
+    
+};
+
+console.log(class_backup_object['ButtonClass']);
+let backupcolor = class_backup_object['ButtonClass'];
+
+
+function changeColor () {
+    console.log("color changed to red");
+    let color_new = "redbutton";
+    document.getElementById('100').classList.remove(backupcolor);
+
+    document.getElementById('100').setAttribute('class', color_new);
+    //    document.getElementById('100').classList.add(color_new);
+
+
+}
+
+console.log('original color', backupcolor);
+
