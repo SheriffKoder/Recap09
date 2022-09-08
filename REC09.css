@@ -283,3 +283,26 @@ input:out-of-range { /*if you type input out of min/max number range it is given
 .bluebutton {
     background-color: blue;
 }
+
+.RecapDiv {
+
+    border: 3px solid blue;
+    height: 100px;
+    width: 100px;
+    float: right;
+
+
+}
+
+.RecapDiv p {
+    font-variant-caps: small-caps;
+    font-size: 20px;
+    
+    text-shadow:
+    -1px 0 black, 
+    0 1px black, 
+    1px 0 black, 
+    0 -1px black
+    ;
+
+}
