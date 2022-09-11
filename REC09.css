@@ -149,7 +149,7 @@ according to what ?
 
 .grow2 {
     flex-grow: 3;
-    flex-shrink: 6;
+    flex-shrink: 5;
     
 }
 
@@ -318,4 +318,65 @@ input:out-of-range { /*if you type input out of min/max number range it is given
     width: 100px;
     height: 100px;
 
+}
+
+
+.Rec1109 {
+
+    border: 1px solid red;
+    
+    max-width: 800px;
+    /*min-width: 800px;*/
+    height: 300px;
+
+    display: flex;
+
+}
+
+.Rec1109 div {
+    flex-basis: 100px;
+    min-width: 100px;
+    background-color: whitesmoke;
+    flex-grow: 2;
+    border:1px solid black;
+}
+
+.Rec1109 div:nth-of-type(2) {
+    flex-grow: 1;
+
+}
+
+/*///////////////////////////////////////////////////////*/
+
+.Rec1109_1 {
+
+    border: 1px solid red;
+    
+    max-width: 800px;
+    /*min-width: 800px;*/
+    height: 300px;
+
+    display: grid;
+    place-items: center;
+
+
+}
+
+.Rec1109_1 div {
+    background-color: whitesmoke;
+    border:1px solid black;
+    height: 150px;
+    width: 150px;
+}
+
+#descendant2 {
+    background-color: red;
+    border:1px solid black;
+    height: 100px;
+    width: 100px;
+}
+
+
+#descendant > * {
+    background : black;
 }
