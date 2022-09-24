@@ -1,5 +1,5 @@
 
-
+/*
 function selection_function (x) {
 
     console.log(x.value);
@@ -63,6 +63,7 @@ byId
 
 */
 
+/*
 document.getElementById('divX').style.borderColor = 'blue'; 
 document.getElementById('divX').style.color = 'white'; 
 
@@ -128,7 +129,7 @@ console.log(output);
 
 ////////////////////////////////////
 
-
+/*
 //playing with objects 
 
 let object_choices = {
@@ -291,3 +292,14 @@ function changeColor () {
 
 console.log('original color', backupcolor);
 
+*/
+/////////////////////////////////////////////////////////
+
+
+function FUN () {
+    console.log('FUN');
+}
+
+addEventListener(onload, 'FUN');
+
+FUN();
