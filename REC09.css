@@ -463,3 +463,25 @@ td {
     text-align: right;
 
 }
+
+
+/*/////////////////////////////////*/
+
+.dl_l {
+    height: 200px;
+    width: 300px;
+    background-color: green;
+    display: flex;
+
+}
+
+.dt_l {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+#email_id:hover {
+    background: black;
+    color:white;
+}

@@ -296,10 +296,19 @@ console.log('original color', backupcolor);
 /////////////////////////////////////////////////////////
 
 
-function FUN () {
-    console.log('FUN');
+function fun () {
+    console.log("hello");
 }
 
-addEventListener(onload, 'FUN');
+/////////////////////////////////////////////////////////
 
-FUN();
+
+
+function FUN (x) {
+    let y = x.SBA.value;  //named myform
+    x.name1.focus();
+//	let x = document.forms["myform"]["name0"].value;
+
+    console.log(y);
+
+    }
