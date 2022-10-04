@@ -270,7 +270,7 @@ BOILERPLATE
         <br><br><br>
         
 
-        <form   name="myform" action="Week6_coursera_mysubmitpage.html" 
+        <form   name="myformx" action="Week6_coursera_mysubmitpage.html" 
                 method="post" onsubmit="return false;">
 
                 <input type="text" name="input_name0" id="input_id1" placeholder="xxx-xxx" required>
@@ -533,18 +533,18 @@ BOILERPLATE
         <fieldset>
             <legend>Form Name</legend>
 
-            <form name="myform"  method="post" onsubmit="return false">
+            <form   name="myform" action="#" 
+            method="post" onsubmit="FUN(this);"> <!--submit will refresh the page but will pass its/this properties -->
 
-                <input name="SBA" type="number" value="text_shown">
+                <input type="text" name="input_name0" id="input_id1" placeholder="xxx-xxx" required>
+                <input type="text" name="input_name1" id="input_id" placeholder="xxx-xxx" pattern="[A-Za-z]{3}" required>
+                <input type="number" min="5" max="10" value="17">
 
-                <input name="name1" type="text" value="text_shown">
-                <button onclick="FUN(this);"> take input </button>
-
+                <input type="submit">
+                <button name="two" id="100" class="redbutton" onclick="FUN(myform);"> take input </button>
+                
 
             </form>
-
-
-
         </fieldset>
 
 

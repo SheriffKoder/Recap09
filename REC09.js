@@ -296,19 +296,22 @@ console.log('original color', backupcolor);
 /////////////////////////////////////////////////////////
 
 
-function fun () {
-    console.log("hello");
-}
 
 /////////////////////////////////////////////////////////
 
 
 
-function FUN (x) {
-    let y = x.SBA.value;  //named myform
-    x.name1.focus();
-//	let x = document.forms["myform"]["name0"].value;
+function FUN (myform) {
 
-    console.log(y);
 
-    }
+    //taking inputs from a form method 1 (not using the parameter)
+    let six_42 = document.forms["myform"]["input_name0"].value;
+    console.log("six_42 " + six_42);
+
+        //taking inputs from a form method 2
+        let six_45 = myform.input_name0.value;
+        myform.input_name1.focus();
+        console.log("six_45 " + six_45);
+    
+
+}
