@@ -315,3 +315,14 @@ function FUN (myform) {
     
 
 }
+
+
+/////////////////////////////////////////////////////////
+
+function Functionselection (para) {
+
+    let input = document.getElementById(para.value);
+    let input2 = input.innerHTML.trim();
+    console.log(input2);
+
+}
