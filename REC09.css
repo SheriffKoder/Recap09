@@ -485,3 +485,48 @@ td {
     background: black;
     color:white;
 }
+
+
+/*////////////////////////////////////////////////////////////////////*/
+
+.container {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    background-color: grey;
+  }
+
+.container > * {
+    outline: 2px solid blue;
+}
+
+.card_outer {
+    display: grid;
+    grid-template-columns: auto auto;
+    /*gets the images horizontal each other rather than vertical to each other*/
+    grid-gap: 10px;
+  }
+
+  .card {
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: whitesmoke; 
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 0 1.5rem rgb(17,17,17) ;
+    transition: 0.15s;
+
+  }
+
+
+  a:hover img {
+    box-shadow: 0 0 50px rgba(17,17,17, 0.5);
+    transform: rotate(-2deg) translateY(-5px) scale(1.03);
+}
