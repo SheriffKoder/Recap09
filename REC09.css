@@ -533,6 +533,7 @@ td {
 
 
 /*////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////*/
 
 *,
 *::before,
@@ -555,14 +556,23 @@ td {
     place-items: center;
 
     height: 300px;
-    width: 600px;
+    width: 300px;
 
 
 }
 
+            /*/////////////////////////////////////*/
+
 .neon-button {
 
-    text-align: none;
+    height: 70px;
+    width: 180px;
+    
+
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+
     color: var(--clr-neon);
     border: var(--clr-neon) 0.125em solid;
     padding: 0.25em 1.5em;
@@ -579,7 +589,128 @@ td {
     0 0 0.5em 0 var(--clr-neon)
     ;
 
+    position: relative;
+
 }
 
     /* so to create the button itself,
-    border-neon, in/out shadow-neon, text-shadow white/neon */
+    border-neon, in/out shadow-neon, text-shadow white/neon
+    
+    now the before and after */
+
+
+    /*add a reflection using the transform line. filterblur, opacity */
+    .neon-button::before {
+
+        content: "";
+        position: absolute;
+        background: var(--clr-neon);
+
+        width: 100%;
+        height: 100%;
+
+        left: 0;
+
+        top: 120%;
+        transform: perspective(1em) rotateX(40deg)  scale(0.8,0.35)  ;
+        filter: blur(1.2em);
+        opacity: 0.7;
+
+
+    }
+
+
+/*second effect*/
+.neon-button::after {
+    
+    content: '';
+    position: absolute;
+
+    background-color: var(--clr-neon); /*was on the button hover but we put it here to sum effects and with z-index to not make it overlap the button itself*/
+
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    box-shadow:  0 0 5em 0.5em var(--clr-neon);
+    opacity:0;
+
+    z-index: 0;
+    transition: opacity 100ms linear; /*end steps*/
+
+    
+}
+
+/*add background and box shadow neon, make text color background color
+switch opacities */
+
+.neon-button:hover, .neon-button:focus {
+
+    color: var(--clr-bg);
+    text-shadow: none;
+
+}
+
+.neon-button:hover > p {
+
+    position: absolute;
+    z-index: 1;
+    color: var(--clr-bg);
+
+}
+
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+    opacity: 1;       /*from 0.7 to this value*/
+}
+
+
+.neon-button:hover::after,
+.neon-button:focus::after { /*when we hover on neon button the after will ..*/
+    opacity: 1;
+}
+
+
+
+    .test_div1810 {
+        height: 100px;
+        width: 200px;
+        background: red;
+        color: white;
+        font-size: 3rem;
+        font-weight: 600;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        margin-left: 100px;
+
+        /*just shaping */
+
+        position: relative; /**/
+    }
+
+
+
+    .blur_mirror {
+
+        position: absolute;
+        top:70%;
+        right: 0;
+
+        transform: perspective(1em) rotateX(225deg)  scale(1.2,0.35)  ;
+        filter: blur(0.1em);
+
+        opacity: 0.1;
+        transition: opacity 1s linear;
+
+        border-radius: 20%;
+    }
+
+    .test_div1810:hover .blur_mirror {
+
+        opacity: 0.3;
+
+    }
+
