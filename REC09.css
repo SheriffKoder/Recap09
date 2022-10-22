@@ -673,6 +673,9 @@ switch opacities */
 }
 
 
+/*////////////////////////////////////////////////////////////////////*/
+
+
 
     .test_div1810 {
         height: 100px;
@@ -714,3 +717,53 @@ switch opacities */
 
     }
 
+/*////////////////////////////////////////////////////////////////////*/
+
+
+a[data-tool-tip] {
+
+    position: relative;
+    height: 200px;
+    width: 300px;
+    background: red;
+}
+
+/* 
+link with a tool tip 
+::after content attr of tool-tip
+
+style and position
+
+
+*/
+
+
+a[data-tool-tip]::after {
+
+    position: absolute;
+    content: attr(data-tool-tip);
+
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    background-color: grey;
+    padding: 1em 3em;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.75em;
+    white-space: nowrap;
+
+    transform : scale(0);
+    transition: 
+    transform 150ms ease-out, 
+    bottom 150ms ease-out ;
+
+
+}
+
+a[data-tool-tip]:hover::after {
+    bottom: 100%;
+    transform : scale(1);
+
+}
