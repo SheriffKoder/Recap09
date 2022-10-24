@@ -734,6 +734,7 @@ link with a tool tip
 
 style and position
 
+on hover opacity and location up > the effect
 
 */
 
@@ -766,4 +767,16 @@ a[data-tool-tip]:hover::after {
     bottom: 100%;
     transform : scale(1);
 
+}
+
+/*////////////////////////////////////////////////////////////////////*/
+
+a[href^="http"] {
+    position: relative;
+}
+
+a[href^="http"]::after {
+    font-family: "front awesome 5 free";
+    content: "\f116";
+    font-weight: 500;
 }
