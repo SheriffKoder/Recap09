@@ -773,10 +773,67 @@ a[data-tool-tip]:hover::after {
 
 a[href^="http"] {
     position: relative;
+    left: 5em;
 }
 
-a[href^="http"]::after {
+a[href^="http"]::after { /*so added an item after the a[] */
     font-family: "front awesome 5 free";
     content: "\f116";
     font-weight: 500;
+}
+
+a[href^="http"]::before { /* and added an item before the a[]*/
+
+    content: counter(preferedname);
+    counter-increment: preferedname;
+
+    position: absolute;
+    color: white;
+    background-color: grey;
+    left: -1.5em;
+    border-radius: 70%;
+    width: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/*////////////////////////////////////////////////////////////////////*/
+
+.intro {
+    position: relative;
+    display: inline;
+    color: red;
+
+}
+
+
+.intro::before, .intro::after {
+    content: "";
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.intro::before {
+
+    right: -20px;
+    left: -20px;
+    background-color: cornflowerblue;
+    z-index: -1;
+
+}
+
+.intro::after {
+
+        width: 100vw;
+        background: red;
+        top: 0;
+        z-index: -2;
+        transform: translateX(-50%);
+
+
 }
