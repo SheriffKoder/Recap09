@@ -837,3 +837,103 @@ a[href^="http"]::before { /* and added an item before the a[]*/
 
 
 }
+
+
+/*////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////*/
+/* psdo card */
+
+.card3110 {
+
+    height: 300px;
+
+    width: 300px;
+    background: gray;
+    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/wh-index-2000x1000-indoorplants-1623171089.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*');
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.card3110::before {
+
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(128, 128, 128, 0.0);
+    transform: translate(-50%,-50%);
+
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+    transition: height 0.25s linear ;
+
+}
+
+.card3110:hover::before {
+    height: 90%;
+
+}
+
+
+.card3110::after {
+
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 0%;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(128, 128, 128, 0.0);
+    transform: translate(-50%,-50%);
+
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
+    transition: width 0.25s linear ;
+
+}
+
+.card3110:hover::after {
+    width: 90%;
+
+}
+
+.card3110 .content611 {
+
+    height: 0%;
+    width: 0%;
+    opacity: 0;
+    background-color: rgba(128, 128, 128, 0.433);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    transition: all 0.2s linear;
+    border-radius: 1000px;
+
+
+}
+
+.card3110:hover > .content611 {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    border-radius: 0px;
+}
+
+/*////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////*/
