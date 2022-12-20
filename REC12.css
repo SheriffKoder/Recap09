@@ -4,4 +4,8 @@
 .class1#subclass2   //contains both
 .class1, .class2    //group
 
+select an a with attribute
+
+a[href^="https:/"
+
 */
